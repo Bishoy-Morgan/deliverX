@@ -80,17 +80,10 @@ gsap.utils.toArray([".aboutUs-container", ".ourMission-container"]).forEach((el)
 
 
 // joureny section
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
-
-// Initialize animation when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Animate each card in the journey section
     const cards = document.querySelectorAll('.journey-section .card');
     
     cards.forEach((card, index) => {
-        // Main animation: fade in and slide up
         gsap.fromTo(card, 
             {
                 opacity: 0,
@@ -105,57 +98,27 @@ document.addEventListener('DOMContentLoaded', function() {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: card,
-                    start: "top 85%",  // Start animation when card is 85% down viewport
-                    end: "top 60%",    // End when card is 60% down viewport
-                    toggleActions: "play none none reverse",
-                    // markers: true,  // Uncomment to see trigger points (for debugging)
-                }
-            }
-        );
-        
-        // Optional: Stagger delay for sequential appearance
-        // Add this if you want cards to appear one after another
-        /*
-        gsap.fromTo(card, 
-            {
-                opacity: 0,
-                y: 80,
-                scale: 0.95
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 1,
-                delay: index * 0.2, // Each card delayed by 0.2s
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
+                    start: "top 85%", 
+                    end: "top 60%",   
                     toggleActions: "play none none reverse",
                 }
             }
         );
-        */
     });
     
-    // Pin the left content while scrolling through cards (optional)
-    // This keeps the "Our journey" text sticky while cards scroll
     const journeyContainer = document.querySelector('.ourJourney-container');
     const cardsContainer = document.querySelector('.cards-container');
     
     if (journeyContainer && cardsContainer) {
         ScrollTrigger.create({
             trigger: ".journey-section",
-            start: "top 100px", // Pin starts when section is 100px from top
+            start: "top 100px", 
             end: () => `+=${cardsContainer.offsetHeight - journeyContainer.offsetHeight}`,
             pin: journeyContainer,
             pinSpacing: false,
-            // markers: true, // Uncomment to see pin points
         });
     }
     
-    // Optional: Animate the left content on first view
     gsap.fromTo('.ourJourney-container', 
         {
             opacity: 0,
@@ -201,7 +164,6 @@ gsap.from(".news-card", {
     },
     onComplete: () => {
         gsap.set(".news-card", { clearProps: "transform" }); 
-        // removes inline transform so CSS hover works
     }
 });
 
@@ -229,18 +191,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownMenu = document.querySelector('.nav-item.dropdown .dropdown-menu');
     let dropdownTimeout;
     
-    // Remove Bootstrap's click functionality
     dropdownToggle.setAttribute('data-bs-toggle', '');
     dropdownToggle.setAttribute('aria-expanded', 'false');
     
-    // Show dropdown on hover
     dropdownToggle.addEventListener('mouseenter', function() {
         clearTimeout(dropdownTimeout);
         dropdownMenu.classList.add('show');
         dropdownToggle.setAttribute('aria-expanded', 'true');
     });
     
-    // Hide dropdown when mouse leaves the toggle
     dropdownToggle.addEventListener('mouseleave', function() {
         dropdownTimeout = setTimeout(function() {
             if (!dropdownMenu.matches(':hover')) {
@@ -250,14 +209,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
     
-    // Keep dropdown open when hovering over the menu
     dropdownMenu.addEventListener('mouseenter', function() {
         clearTimeout(dropdownTimeout);
         dropdownMenu.classList.add('show');
         dropdownToggle.setAttribute('aria-expanded', 'true');
     });
     
-    // Hide dropdown when mouse leaves the menu
     dropdownMenu.addEventListener('mouseleave', function() {
         dropdownTimeout = setTimeout(function() {
             dropdownMenu.classList.remove('show');
@@ -265,7 +222,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     });
     
-    // Close dropdown when clicking outside
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav-item.dropdown')) {
             dropdownMenu.classList.remove('show');
@@ -273,7 +229,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Close dropdown on mobile when a link is clicked
     dropdownMenu.addEventListener('click', function(event) {
         if (event.target.classList.contains('dropdown-item')) {
             dropdownMenu.classList.remove('show');
@@ -281,7 +236,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Handle touch devices
     dropdownToggle.addEventListener('touchstart', function() {
         if (dropdownMenu.classList.contains('show')) {
             dropdownMenu.classList.remove('show');
