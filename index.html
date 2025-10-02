@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About - Deliver X - Webflow Ecommerce website template</title>
+        <link 
+        href="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/620416c12c050b2c6989740d_favicon-delivery-template.svg" 
+        rel="shortcut icon" 
+        type="image/x-icon">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/metropolis.min.css">
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-xxl sticky-navbar">
+            <div class="nav-container">
+                <img  
+                src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6216c3e8db8e185b2e172d35_logo-deliver-template.svg" alt="Deliver X Webflow Template - Logo" 
+                class="header-logo"
+                >
+                <div class="collapse navbar-collapse justify-content-end " id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#/about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#/pricing">Pricing</a>
+                        </li>
+
+                        <!-- Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a 
+                                class="nav-link dropdown-toggle " 
+                                href="#" 
+                                id="navbarDropdown" 
+                                role="button"
+                            >
+                                Pages
+                                <svg class="custom-arrow" width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.71069 18.2929C10.1012 18.6834 10.7344 18.6834 11.1249 18.2929L16.0123 13.4006C16.7927 12.6195 16.7924 11.3537 16.0117 10.5729L11.1213 5.68254C10.7308 5.29202 10.0976 5.29202 9.70708 5.68254C9.31655 6.07307 9.31655 6.70623 9.70708 7.09676L13.8927 11.2824C14.2833 11.6729 14.2833 12.3061 13.8927 12.6966L9.71069 16.8787C9.32016 17.2692 9.32016 17.9023 9.71069 18.2929Z" fill="#121212"></path> </g></svg>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-content">
+                                    <div class="dropdown-column d-flex gap-5   ">
+                                        <div class="menu-section">
+                                            <h6 class="dropdown-header ps-0">Menu</h6>
+                                            <div class="menu-links">
+                                                <a class="dropdown-item" href="#">Home</a>
+                                                <a class="dropdown-item" href="#/about">About</a>
+                                                <a class="dropdown-item" href="#/contact">Contact</a>
+                                                <a class="dropdown-item" href="#/blog">Blog</a>
+                                                <a class="dropdown-item" href="#/blog/posts">Blog Posts</a>
+                                            </div>
+                                        </div>
+                                        <div class="menu-section" style="margin-top: 4rem;">
+                                            <div class="menu-links">
+                                                <a class="dropdown-item" href="#/plans">Plans</a>
+                                                <a class="dropdown-item" href="#/plans/single">Plan Single</a>
+                                                <a class="dropdown-item" href="#/register">Register</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="dropdown-column">
+                                        <h6 class="dropdown-header ps-0">Utility pages</h6>
+                                        <div class="utility-links">
+                                            <a class="dropdown-item" href="#/start">Start here</a>
+                                            <a class="dropdown-item" href="#/styleguide">Styleguide</a>
+                                            <a class="dropdown-item" href="#/password">Password protected</a>
+                                            <a class="dropdown-item" href="#/404">404 Not found</a>
+                                            <a class="dropdown-item" href="#/licenses">Licenses</a>
+                                            <a class="dropdown-item" href="#/changelog">Changelog</a>
+                                        </div>
+                                        
+                                        <div class="browse-templates">
+                                            <a class="dropdown-item" href="#/templates">Browse More Templates</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#pricing">Cart(0)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="secondary-btn ms-3 me-1" href="#download-app">Download app</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="main-btn" href="#register">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero d-flex flex-column align-items-center" id="home">
+            <div class="hero-container ">
+                <div class="d-flex align-items-center justify-content-between align-items-center pt-3">
+                    <div class="left-hero">
+                        <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                            About Deliver X
+                        </span>
+                        <h1 class="my-3">We are here to help amazing restaurants get great customers</h1>
+                        <p class="text-gray">At morbi adipiscing sit sed consectetur senectus Dignissim sed amet tincidunt vitae ultricies ultrices amet fermentum amet neque et id sed lacinia massa pretium aliquam libero et.</p>
+                    </div>
+                    <div class="right-hero ">
+                        <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768f4ff084869c4a1c57_image-about-hero-delivery-template.png" loading="eager" data-w-id="08651655-47aa-209b-fdb2-3233afdc40e3" alt="Help Amazing Restaurants With Great Customers - Deliver X Webflow Template" class="w-100 h-100">
+                        <div class="left-image">
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768e2b5f20a3847da6a8_image-1-card-about-hero-delivery-template.png" loading="eager" alt="Help Amazing Restaurants With Great Customers - Deliver X Webflow Template" class="w-100 h-100">
+                        </div>
+                        <div class="right-image">
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ecbdabafa33e57a7c_image-2-card-about-hero-delivery-template.svg" loading="eager" alt="Help Amazing Restaurants With Great Customers - Deliver X Webflow Template" class="w-100 h-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nu-container">
+                <div class="text-start">
+                    <div>
+                        <span class="number text-black">10M</span>
+                        <span class="text-orange sign">+</span>
+                    </div>
+                    <span class="d-block text-18-20 fw-medium mt-2">Happy customers</span>
+                </div>
+                <div class="ms-2">
+                    <div>
+                        <span class="number text-black">500k</span>
+                        <span class="text-orange sign">+</span>
+                    </div>
+                    <span class="d-block text-18-20 fw-medium mt-2">Restaurants available</span>
+                </div>
+                <div class="text-center">
+                    <div>
+                        <span class="number text-black">30M</span>
+                        <span class="text-orange sign">+</span>
+                    </div>
+                    <span class="d-block text-18-20 fw-medium mt-2">Successful deliveries</span>
+                </div>
+                <div class="text-end">
+                    <div>
+                        <span class="number text-black">99.9</span>
+                        <span class="text-orange sign">%</span>
+                    </div>
+                    <span class="d-block text-18-20 fw-medium mt-2">Customer satisfaction</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section ">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="feature-image">
+                    <img 
+                        src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768fa223098a9258964e_image-2-stoy-about-delivery-template.jpg" 
+                        alt="Started Back In 2016 - Deliver X Webflow Template" 
+                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 680px, (max-width: 1439px) 47vw, 597.71875px" 
+                        srcset="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768fa223098a9258964e_image-2-stoy-about-delivery-template-p-500.jpeg 500w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768fa223098a9258964e_image-2-stoy-about-delivery-template-p-800.jpeg 800w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768fa223098a9258964e_image-2-stoy-about-delivery-template-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768fa223098a9258964e_image-2-stoy-about-delivery-template.jpg 1196w"
+                    >
+                </div>
+                <div class="aboutUs-container">
+                    <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                        About us
+                    </span>
+                    <h2 class="my-3 text-black">Our company started back in 2016</h2>
+                    <p class="text-gray text-18-30">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+                    </p>
+                </div>
+            </div>
+            <div class="container d-flex justify-content-between align-items-center ">
+                <div class="ourMission-container">
+                    <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                        Our mission
+                    </span>
+                    <h2 class="my-3 text-black">
+                        Our mission is to disrupt the food industry
+                    </h2>
+                    <p class="text-gray text-18-30">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                    </p>
+                </div>
+                <div class="feature-image">
+                    <img 
+                        src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ef5a81a9f9bf7b9e9_image-1-stoy-about-delivery-template.jpg" alt="Disrupt The Food Industry - Deliver X Webflow Template" 
+                        sizes="(max-width: 479px) 100vw, (max-width: 767px) 90vw, (max-width: 991px) 680px, (max-width: 1439px) 47vw, 597.734375px" 
+                        srcset="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ef5a81a9f9bf7b9e9_image-1-stoy-about-delivery-template-p-500.jpeg 500w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ef5a81a9f9bf7b9e9_image-1-stoy-about-delivery-template-p-800.jpeg 800w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ef5a81a9f9bf7b9e9_image-1-stoy-about-delivery-template-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6201768ef5a81a9f9bf7b9e9_image-1-stoy-about-delivery-template.jpg 1196w" 
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- journey Section -->
+        <section class="journey-section">
+            <div class="container d-flex justify-content-between align-items-start ">
+                <div class="ourJourney-container ">
+                    <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                        Our journey
+                    </span>
+                    <h2 class="my-3 text-black">
+                        It has been a long but incredible journey
+                    </h2>
+                    <p class="text-gray text-18-30">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu egestas morbi sem vulputate etiam facilisis pellentesque ut quis.
+                    </p>
+                    <button class="custom-btn mt-4">
+                        download app
+                    </button>
+                </div>
+                <div class="cards-container ">
+                    <div class="card">
+                        <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                            2016
+                        </span>
+                        <h4 class="my-3 text-black">
+                            Deliver X was founded
+                        </h4>
+                        <p class="text-gray text-18-30">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                            2018
+                        </span>
+                        <h4 class="my-3 text-black">
+                            Raised Series A at $50M valuation
+                        </h4>
+                        <p class="text-gray text-18-30">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                            2019
+                        </span>
+                        <h4 class="my-3 text-black">
+                            Raised Series B at $600M valuation
+                        </h4>
+                        <p class="text-gray text-18-30">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                            2022
+                        </span>
+                        <h4 class="my-3 text-black">
+                            Raised Series C at $3B valuation
+                        </h4>
+                        <p class="text-gray text-18-30">
+                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners section  -->
+        <section class="partners-section">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center ">
+                <div class="ourPartners-container">
+                    <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                        Our Partners
+                    </span>
+                    <h2 class="my-3 text-black">
+                        We don’t walk alone, Deliver X works thanks to our partners
+                    </h2>
+                    <p class="text-gray text-18-30 ">
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit tortor eu egestas morbi sem vulputate etiam facilisis pellentesque ut quis.
+                    </p>
+                </div>
+                <div class="three-cols">
+                    <div class="three-cols-content">
+                        <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017b070212f9403ca3a97f_image-1-partners-delivery-template.svg" alt="Customers - Deliver X Webflow Template">
+                        <h3 class="text-black">
+                            Customers
+                        </h3>
+                        <p >
+                            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam 
+                            <span class="text-no-wrap">sit nullam.</span>
+                        </p>
+                    </div>
+                    <div class="three-cols-content">
+                        <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017b07238dadda77c03341_image-2-partners-delivery-template.svg" alt="Restaurants - Deliver X Webflow Template">
+                        <h3 class="text-black">
+                            Restaurants
+                        </h3>
+                        <p >
+                            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam 
+                            <span class="text-no-wrap">sit nullam.</span>
+                        </p>
+                    </div>
+                    <div class="three-cols-content">
+                        <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017b075b917b7d28e88cc8_image-3-partners-delivery-template.svg" alt="Riders - Deliver X Webflow Template">
+                        <h3 class="text-black">
+                            Riders
+                        </h3>
+                        <p >
+                            Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam 
+                            <span class="text-no-wrap">sit nullam.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- news section  -->
+        <section class="news-section">
+            <div class="container d-flex flex-column justify-content-center align-items-center text-center ">
+                <div>
+                    <span class="text-18-20 text-orange d-block text-uppercase " style="letter-spacing:1.5px;">
+                        Press & News
+                    </span>
+                    <h2 class="my-3 text-black">
+                        See what the press says<br/>about Deliver X
+                    </h2>
+                </div>
+                <div class="news-cards-container">
+                    <a class="news-card">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017fab386a9117726aad8f_image-1-logo-press-delivery-template.svg" loading="eager" alt="What The Press Says About Our Company - Deliver X Webflow Template">
+                        </div>
+                        <h3 class="text-black my-4 text-start">
+                            Deliver X raises $26M in series B funding <span class="text-no-wrap">for growth</span>
+                        </h3>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <div class="w-50 d-flex justify-content-start align-items-center">
+                                <div class="text-orange text-18-20 fw-bold ">Read more</div>
+                                <div  class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </div>
+                            </div>
+                            <div class="text-end text-gray text-20-22">
+                                January 22, 2023
+                            </div>
+                        </div>
+                    </a>
+                    <a class="news-card">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017fac4a9181ff3e5b1fb1_image-3-logo-press-delivery-template.svg" loading="eager" alt="What The Press Says About Our Company - Deliver X Webflow Template">
+                        </div>
+                        <h3 class="text-black my-4 text-start">
+                            Deliver X claims to be the #1 player in the delivery industry
+                        </h3>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <div class="w-50 d-flex justify-content-start align-items-center">
+                                <div class="text-orange text-18-20 fw-bold ">Read more</div>
+                                <div  class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </div>
+                            </div>
+                            <div class="text-end text-gray text-20-22">
+                                January 22, 2023
+                            </div>
+                        </div>
+                    </a>
+                    <a class="news-card">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017facf5a81a3025f830c1_image-2-logo-press-delivery-template.svg" loading="eager" alt="What The Press Says About Our Company - Deliver X Webflow Template">
+                        </div>
+                        <h3 class="text-black my-4 text-start">
+                            Introducing curbside ordering with <span class="text-no-wrap">Deliver X</span>
+                        </h3>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <div class="w-50 d-flex justify-content-start align-items-center">
+                                <div class="text-orange text-18-20 fw-bold ">Read more</div>
+                                <div  class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </div>
+                            </div>
+                            <div class="text-end text-gray text-20-22">
+                                January 22, 2023
+                            </div>
+                        </div>
+                    </a>
+                    <a class="news-card">
+                        <div>
+                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/62017fab7168b306f912ea93_image-4-logo-press-delivery-template.svg" loading="eager" alt="What The Press Says About Our Company - Deliver X Webflow Template">
+                        </div>
+                        <h3 class="text-black my-4 text-start">
+                            Introducing the Square POS integration with <span class="text-no-wrap">Deliver X</span>
+                        </h3>
+                        <div class="w-100 d-flex justify-content-between align-items-center">
+                            <div class="w-50 d-flex justify-content-start align-items-center">
+                                <div class="text-orange text-18-20 fw-bold ">Read more</div>
+                                <div  class="arrow-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 17L17 7M17 7H8M17 7V16" stroke="#ff5634" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                                </div>
+                            </div>
+                            <div class="text-end text-gray text-20-22">
+                                January 22, 2023
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container d-flex flex-column justify-content-center">
+                <div class="footer-top">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex flex-column" style="width: 40%;">
+                            <a href="#" class="footer-logo mb-4">
+                                <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/6216c3e8db8e185b2e172d35_logo-deliver-template.svg" alt="Deliver X Webflow Template - Logo">
+                            </a>
+                            <p class="pe-3">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor <span>incididunt ut.</span>
+                            </p>
+                        </div>
+                        <div class="w-50 d-flex justify-content-end align-items-center gap-3">
+                            <a href="#" target="_blank" class="main-btn d-flex justify-content-center align-items-center " style="line-height:22px;">
+                                <div class="custom-icon">
+                                    <svg fill="#ffffff" viewBox="-6.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>apple</title> <path d="M13.313 7.219c0.25-0.688 0.406-1.281 0.406-1.844 0-0.094-0.031-0.156-0.031-0.25s-0.031-0.219-0.063-0.344c-1.563 0.344-2.656 1.031-3.344 2.031-0.688 0.969-1.031 2.125-1.063 3.469 0.563-0.063 1.031-0.156 1.375-0.25 0.469-0.156 0.969-0.469 1.469-0.938 0.563-0.563 1-1.25 1.25-1.875zM11.531 10.344c-0.938 0.313-1.594 0.438-1.938 0.438-0.281 0-0.875-0.125-1.844-0.375-0.938-0.281-1.719-0.438-2.406-0.438-1.531 0-2.813 0.656-3.844 1.969-1 1.313-1.5 2.969-1.5 5.031 0 2.219 0.656 4.469 1.969 6.781 1.344 2.313 2.719 3.438 4.063 3.438 0.438 0 1-0.156 1.781-0.438 0.719-0.281 1.344-0.438 1.906-0.438s1.25 0.125 2.031 0.406c0.813 0.281 1.438 0.406 1.906 0.406 1.156 0 2.313-0.875 3.469-2.594 0.375-0.563 0.719-1.156 1-1.719 0.25-0.531 0.469-1.094 0.656-1.625-0.844-0.25-1.563-0.844-2.156-1.719-0.594-0.906-0.906-1.906-0.906-3 0-1.031 0.281-1.938 0.844-2.781 0.344-0.438 0.875-1 1.563-1.594-0.219-0.281-0.469-0.563-0.688-0.781-0.25-0.219-0.469-0.406-0.688-0.563-0.875-0.563-1.844-0.875-2.906-0.875-0.625 0-1.406 0.188-2.313 0.469z"></path> </g></svg>
+                                </div>
+                                <div>Download for iOS</div>
+                            </a>
+                            <a href="#" target="_blank" class="main-btn d-flex justify-content-center align-items-center " style="line-height:22px;">
+                                <div class="custom-icon">
+                                    <svg fill="#ffffff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>android</title> <path d="M23.35 12.653l2.496-4.323c0.044-0.074 0.070-0.164 0.070-0.26 0-0.287-0.232-0.519-0.519-0.519-0.191 0-0.358 0.103-0.448 0.257l-0.001 0.002-2.527 4.377c-1.887-0.867-4.094-1.373-6.419-1.373s-4.532 0.506-6.517 1.413l0.098-0.040-2.527-4.378c-0.091-0.156-0.259-0.26-0.45-0.26-0.287 0-0.519 0.232-0.519 0.519 0 0.096 0.026 0.185 0.071 0.262l-0.001-0.002 2.496 4.323c-4.286 2.367-7.236 6.697-7.643 11.744l-0.003 0.052h29.991c-0.41-5.099-3.36-9.429-7.57-11.758l-0.076-0.038zM9.098 20.176c-0 0-0 0-0 0-0.69 0-1.249-0.559-1.249-1.249s0.559-1.249 1.249-1.249c0.69 0 1.249 0.559 1.249 1.249v0c-0.001 0.689-0.559 1.248-1.249 1.249h-0zM22.902 20.176c-0 0-0 0-0 0-0.69 0-1.249-0.559-1.249-1.249s0.559-1.249 1.249-1.249c0.69 0 1.249 0.559 1.249 1.249v0c-0.001 0.689-0.559 1.248-1.249 1.249h-0z"></path> </g></svg>
+                                </div>
+                                <div>Download for Android</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <div class="d-flex justify-content-between">
+                        <!-- Menu Section -->
+                        <div class="menu ">
+                            <h4 class="text-20-22 text-black fw-bold">Menu</h4>
+                            <div class="row">
+                                <div class="col-6">
+                                    <ul class="footer-links">
+                                        <li><a href="#/home">Home</a></li>
+                                        <li><a href="#/about" aria-current="page">About</a></li>
+                                        <li><a href="#/contact">Contact</a></li>
+                                        <li><a href="#/blog">Blog</a></li>
+                                        <li><a href="#">Blog posts</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6">
+                                    <ul class="footer-links">
+                                        <li><a href="#/plans">Plans</a></li>
+                                        <li><a href="#">Plan single</a></li>
+                                        <li><a href="#/download">Register</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Utility Pages Section -->
+                        <div class="utility ">
+                            <h4 class="text-20-22 text-black fw-bold">Utility pages</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">Start here</a></li>
+                                <li><a href="#">Styleguide</a></li>
+                                <li><a href="#">Password protected</a></li>
+                                <li><a href="#">404 Not found</a></li>
+                                <li><a href="#">Licenses</a></li>
+                                <li><a href="#">Changelog</a></li>
+                                <li>
+                                    <a href="#" 
+                                    class="special">
+                                        Browse More Templates
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Available in Section -->
+                        <div class="available ">
+                            <h4 class="text-20-22 text-black fw-bold">Available in</h4>
+                            <div class="row ms-0">
+                                <div class="col-6 ">
+                                    <div class="location-item ">
+                                        <div class="location-icon">
+                                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/61fdd35beba8182905a8fd1c_icon-1-service-available-delivery-template.svg" loading="eager" alt="San Francisco - Deliver X Webflow Template">
+                                        </div>
+                                        <h5 class="text-black">San Francisco, CA</h5>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-icon">
+                                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/61fdd35beba818a369a8fd1e_icon-2-service-available-delivery-template.svg" loading="eager" alt="New York - Deliver X Webflow Template">
+                                        </div>
+                                        <h5 class="text-black">Los Angeles, CA</h5>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="location-item">
+                                        <div class="location-icon">
+                                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/61fdd35b08dbc7d63e9b3811_icon-3-service-available-delivery-template.svg" loading="eager" alt="Los Angeles - Deliver X Webflow Template">
+                                        </div>
+                                        <h5 class="text-black">New York, NY</h5>
+                                    </div>
+                                    <div class="location-item">
+                                        <div class="location-icon">
+                                            <img src="https://cdn.prod.website-files.com/61fd4a65725a5325e9bb25c2/61fdd35b80572eda7e5d0c79_icon-4-service-available-delivery-template.svg" loading="eager" alt="Seattle - Deliver X Webflow Template">
+                                        </div>
+                                        <h5 class="text-black">Seattle, WA</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="text-18-30">Copyright © Deliver X | Designed by <a href="#" target="_blank" class="text-decoration-none text-orange">BRIX Templates</a> - Powered by <a href="#" target="_blank" class="text-decoration-none text-orange">Webflow</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap JS -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- GSAP  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+        <script src="assets/js/animations.js"></script>
+    </body>
+</html>

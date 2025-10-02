@@ -1,0 +1,29 @@
+
+.partners-section {
+    width: 100%;
+    padding: 10rem 0;
+    background-color: var(--neutral--100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourPartners-container {
+    width: 60%;
+}
+
+.three-cols {
+    width: 100%;
+    padding: 6rem 0 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+.three-cols-content {
+    max-width: 350px;
+}
+
+.three-cols-content h3 {
+    padding: 2rem 0 1rem 0;
+}

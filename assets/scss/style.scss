@@ -1,0 +1,160 @@
+@import "base/mixins";
+@import "layout/navbar";
+@import "layout/hero";
+@import "layout/features";
+@import "layout/journey";
+@import "layout/partners";
+@import "layout/news";
+@import "layout/footer";
+
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --neutral--600: #656565;
+    --neutral--800: #121212;
+    --accent--primary-1: #ff5634;
+    --secondary--color-2: #fff5f1;
+    --neutral--300: #ededed;
+    --general--shadow-01: #14142b0f;
+    --neutral--200: #fafafa;
+    --neutral--100: white;
+    --general--shadow-02: #10101014;
+    --general--shadow-04: #10101024;
+    --secondary--color-1: #e13f1f;
+    --neutral--700: #3f3f3f;
+    --neutral--500: #929292;
+    --neutral--400: #cacaca;
+    --system--green-400: #11845b;
+    --system--blue-400: #086cd9;
+    --system--blue-300: #1d88fe;
+    --system--blue-200: #8fc3ff;
+    --system--blue-100: #eaf4ff;
+    --system--green-300: #05c168;
+    --system--green-200: #7fdca4;
+    --system--green-100: #def2e6;
+    --system--red-400: #dc2b2b;
+    --system--300: #ff5a65;
+    --system--red-200: #ffbec2;
+    --system--red-100: #ffeff0;
+    --system--orange-400: #d5691b;
+    --system--orange-300: #ff9e2c;
+    --system--orange-200: #ffd19b;
+    --system--orange-100: #fff3e4;
+    --general--shadow-03: #14142b1a;
+    --general--shadow-05: #14142b29;
+    --general--shadow-06: #14142b3d;
+    --button-shadow--color-01: #ff55330f;
+    --button-shadow--color-2: #ff553314;
+    --button-shadow--color-3: #ff553314;
+    --button-shadow--white-01: #1010100a;
+    --button-shadow--white-02: #14142b0f;
+    --button-shadow--white-03: #14142b1a;
+}
+
+body {
+    position: relative;
+    color: var(--neutral--600);
+    font-family: 'Metropolis', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.667em;
+}
+
+.container {
+    @include container;
+}
+
+
+.text-18-20 {
+    @include font(1.125rem, 1.25rem, 700);
+}
+
+.text-18-30 {
+    @include font(1.125rem, 1.875rem, 400);
+}
+
+.text-20-22 {
+    @include font(1.25rem, 1.375rem, 500);
+}
+
+.text-orange {
+    color: var(--accent--primary-1)
+}
+
+.text-black {
+    color: var(--neutral--800) !important;
+}
+
+.text-gray {
+    color: var(--neutral--600)
+}
+
+.main-btn {
+    @include button-base;
+    border: 1px solid var(--accent--primary-1);
+    background-color: var(--accent--primary-1);
+    color: var(--neutral--100);
+    text-align: center;
+    font-weight: 700;
+    transition: color .3s, background-color .3s, border-color .3s;
+
+    &:hover {
+        background-color: var(--secondary--color-1);
+        border-color: var(--accent--primary-1);
+    }
+}
+
+.secondary-btn {
+    @include button-base;
+    border: 1px solid var(--neutral--300);
+    background-color: var(--neutral--100);
+    color: var(--neutral--800);
+    box-shadow: 0 2px 6px 0 var(--button-shadow--white-01);
+    text-align: center;
+    font-weight: 500;
+    transition: border-color .3s, background-color .3s, color .3s;
+
+    &:hover {
+        background-color: var(--accent--primary-1);
+        color: var(--neutral--100);
+        border-color: var(--accent--primary-1);
+    }
+}
+
+.custom-btn {
+    border: 1px solid var(--accent--primary-1);
+    background-color: var(--accent--primary-1);
+    color: var(--neutral--100);
+    text-align: center;
+    border-radius: 16px;
+    justify-content: center;
+    padding: 26px 38px;
+    font-weight: 700;
+    line-height: 1.111em;
+    text-decoration: none;
+    transition: color .3s, background-color .3s, border-color .3s;
+}
+
+h1 {
+    @include font(62px, 72px, 700)
+}
+
+h2 {
+    @include font(44px, 54px, 700)
+}
+
+h3 {
+    @include font(1.75rem, 2.5rem, 700); // 28px, 40px
+    
+}
+
+h4 {
+    @include font(1.5rem, 2.125rem, 700); // 24px, 34px
+}
+
+h5 {
+    @include font(1.125rem, 1.5rem, 700); // 18px, 24px
+}

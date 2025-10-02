@@ -1,0 +1,61 @@
+
+.hero {
+    padding-bottom: 5rem;
+    background-color: var(--neutral--200);
+}
+
+.hero-container {
+    @include container;
+    padding: 1.5rem 0;
+    color: var(--neutral--800);
+    height: 100vh;
+}
+
+.left-hero {
+    width: 52%;
+}
+
+.right-hero {
+    width: 43.2%;
+    position: relative;
+}
+
+.left-image {
+    max-width: 45%;
+    position: absolute;
+    bottom: 105px;
+    left: -18px;
+    
+}
+
+.left-image img {
+    box-shadow: 0 14px 42px 0 var(--general--shadow-04);
+    border-radius: 16px;
+}
+
+.right-image {
+    max-width: 55%;
+    position: absolute;
+    bottom: 30px;
+    right: -52px;
+}
+
+.right-image img {
+    box-shadow: 0 14px 42px 0 var(--general--shadow-04);
+    border-radius: 8px;
+}
+
+.nu-container {
+    @include container;
+    margin-top: 2rem;
+    display: grid;
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+}
+
+.number, .sign {
+    @include font(56px, 66px, 700);
+}
