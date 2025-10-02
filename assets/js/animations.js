@@ -22,13 +22,25 @@ introTl.from(".left-hero", {
 introTl.from(".right-hero", {
     scale: 0.8,
     opacity: 0,
-    duration: .8,
+    duration: 0.8,
     ease: "power3.out",
-}, "-=0.5");
+})
+.from(".right-hero .left-image", {
+    opacity: 0,
+    scale: 0.8,
+    duration: 0.4,
+    ease: "power3.out",
+}, "-=0.4")
+.from(".right-hero .right-image", {
+    opacity: 0,
+    scale: 0.8,
+    duration: 0.4,
+    ease: "power3.out",
+});
 
 gsap.to(".right-hero .left-image", {
-    y: 40,
-    ease: "sine.inOut", 
+    y: 40, 
+    ease: "sine.inOut",
     scrollTrigger: {
         trigger: ".right-hero",
         start: "top 80%",
@@ -38,15 +50,17 @@ gsap.to(".right-hero .left-image", {
 });
 
 gsap.to(".right-hero .right-image", {
-    y: -40,
+    y: -40, 
     ease: "sine.inOut",
     scrollTrigger: {
         trigger: ".right-hero",
         start: "top 80%",
         end: "bottom top",
-        scrub: 1.5,          
+        scrub: 1.5,
     }
 });
+
+
 
 // nu-container 
 gsap.from(".nu-container > div", {
@@ -75,8 +89,6 @@ gsap.utils.toArray(".features-section .feature-image").forEach((img) => {
         },
     });
 });
-
-
 
 gsap.utils.toArray([".aboutUs-container", ".ourMission-container"]).forEach((el) => {
     gsap.from(el, {
@@ -145,17 +157,30 @@ gsap.from(".three-cols-content > img ", {
 
 // news section
 gsap.from(".news-card", {
-    y: 80,
+    y: 100,
     opacity: 0,
-    stagger: 0.2,
-    duration: 1,
+    duration: .8,
     ease: "power3.out",
     scrollTrigger: {
         trigger: ".news-section",
         start: "top 80%",
+        toggleActions: "play none none reverse"
     },
     onComplete: () => {
-        gsap.set(".news-card", { clearProps: "transform" }); 
+        gsap.set(".news-card", { clearProps: "y,opacity" }); 
+    }
+});
+
+// footer
+gsap.from("footer", {
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    ease: "power3.out",
+    scrollTrigger: {
+        trigger: "footer",
+        start: "top 90%",   // when footer is 90% into view
+        toggleActions: "play none none reverse"
     }
 });
 

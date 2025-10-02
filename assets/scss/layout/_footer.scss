@@ -1,124 +1,120 @@
-
 footer {
     border-top: 1px solid var(--neutral--400);
     background-color: var(--neutral--100);
 
-}
-
-.footer-top {
-    padding: 84px 0 100px 0;
-    border-bottom: 1px solid var(--neutral--400);
-}
-
-.footer-logo img {
-    width: 200px;
-    height: 60px;
-    transition: transform .3s;
-    &:hover {
-        transform: scale(0.9);
+    .custom-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.25rem;
     }
-}
 
-footer .custom-icon {
-    width: 2rem;
-    height: 2rem;
-    margin-right: .25rem;
-}
-
-.footer-middle {
-    width: 100%;
-    padding: 120px 0;
-}
-
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 2rem;
-}
-
-
-.footer-links li {
-    margin-bottom: 12px;
-    
-}
-
-.footer-links a {
-    color: var(--neutral--600);
-    text-decoration: none;
-    transition: color 0.2s;
-    font-size: 18px;
-    line-height: 20px;
-}
-
-.footer-links a:hover {
-    color: var(--accent--primary-1);
-}
-
-.footer-links a.special {
-    color: var(--accent--primary-1);
-    font-weight: 700;
-    border-bottom: 3px solid var(--accent--primary-1);
-    padding-bottom: .5rem;
-    transition: color .3s, border-color .3s;
-    &:hover {
-        color: var(--neutral--800);
-        border-color:var(--neutral--800);
+    .footer-top {
+        padding: 84px 0 100px 0;
+        border-bottom: 1px solid var(--neutral--400);
     }
-}
 
-.footer-middle .menu {
-    width: 20%;
-}
+    .footer-logo img {
+        width: 200px;
+        height: 60px;
+        transition: transform 0.3s;
 
-.footer-middle .utility {
-    width: 20%;
-}
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
 
-.footer-middle .available {
-    width: 45%;
-}
+    .footer-middle {
+        width: 100%;
+        padding: 120px 0;
 
-.location-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    margin-top: 2rem;
-}
+        .menu {
+            width: 20%;
+        }
 
-.location-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    flex-shrink: 0;
-}
+        .utility {
+            width: 20%;
+        }
 
-.location-icon img {
-    border-radius: 24px;
-}
+        .available {
+            width: 45%;
+        }
+    }
 
-.location-name {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    color: var(--neutral-800);
-}
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin-top: 2rem;
 
-.footer-bottom {
-    width: 100%;
-    border-top: 1px solid var(--neutral--300);
-    text-align: center;
-    padding: 32px 0;
-    
-}
+        li {
+            margin-bottom: 12px;
+        }
 
-.footer-bottom a {
-    transition: color .3s;
-}
+        a {
+            color: var(--neutral--600);
+            font-size: 18px;
+            line-height: 20px;
+            text-decoration: none;
+            transition: color 0.2s;
 
-.footer-bottom a:hover {
-    color: var(--neutral--800);
+            &:hover {
+                color: var(--accent--primary-1);
+            }
+
+            &.special {
+                color: var(--accent--primary-1);
+                font-weight: 700;
+                border-bottom: 3px solid var(--accent--primary-1);
+                padding-bottom: 0.5rem;
+                transition: color 0.3s, border-color 0.3s;
+
+                &:hover {
+                    color: var(--neutral--800);
+                    border-color: var(--neutral--800);
+                }
+            }
+        }
+    }
+
+    .location-item {
+        display: flex;
+        align-items: center;
+        margin: 2rem 0 1.5rem;
+    }
+
+    .location-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+        flex-shrink: 0;
+
+        img {
+            border-radius: 24px;
+        }
+    }
+
+    .location-name {
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+        color: var(--neutral-800);
+    }
+
+    .footer-bottom {
+        width: 100%;
+        border-top: 1px solid var(--neutral--300);
+        text-align: center;
+        padding: 32px 0;
+
+        a {
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--neutral--800);
+            }
+        }
+    }
 }

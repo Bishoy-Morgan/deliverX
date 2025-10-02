@@ -14,7 +14,6 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 1.8rem;
-    
 }
 
 .arrow-icon {
@@ -22,8 +21,8 @@
     height: 1.8rem;
     display: flex;
     align-items: center;
-    padding: 0 0 .25rem .1rem;
-    transition: transform .3s;
+    padding: 0 0 0.25rem 0.1rem;
+    transition: transform 0.3s;
 }
 
 .news-card {
@@ -37,14 +36,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    transition: box-shadow .3s, transform .3s;
+    align-items: flex-start;
+    transition: box-shadow 0.3s, transform 0.3s;
     cursor: pointer;
+
     &:hover {
         box-shadow: 0 2px 12px 0 var(--general--shadow-05);
-        transform: translateY(-.5rem);
+        transform: translateY(-0.5rem);
+
         .arrow-icon {
             transform: translate(0.25rem, -0.25rem);
         }
+    }
+}
+
+@media (max-width: 1200px) {
+    .news-cards-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-cards-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .news-card {
+        padding: 70px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .news-card {
+        padding: 50px 24px;
+        border-radius: 16px;
     }
 }

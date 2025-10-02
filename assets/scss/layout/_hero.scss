@@ -21,44 +21,64 @@
     position: relative;
 }
 
+/* Left Image */
 .left-image {
     max-width: 45%;
     position: absolute;
     bottom: 105px;
     left: -18px;
-    
+    animation: float 6s ease-in-out infinite;
+
+    img {
+        box-shadow: 0 14px 42px 0 var(--general--shadow-04);
+        border-radius: 16px;
+    }
 }
 
-.left-image img {
-    box-shadow: 0 14px 42px 0 var(--general--shadow-04);
-    border-radius: 16px;
-}
-
+/* Right Image */
 .right-image {
     max-width: 55%;
     position: absolute;
     bottom: 30px;
     right: -52px;
+    animation: floatReverse 7s ease-in-out infinite;
+
+    img {
+        box-shadow: 0 14px 42px 0 var(--general--shadow-04);
+        border-radius: 8px;
+    }
 }
 
-.right-image img {
-    box-shadow: 0 14px 42px 0 var(--general--shadow-04);
-    border-radius: 8px;
-}
-
+/* Numbers Container */
 .nu-container {
     @include container;
     margin-top: 2rem;
     display: grid;
     grid-column-gap: 28px;
     grid-row-gap: 28px;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.number, .sign {
+.number,
+.sign {
     @include font(56px, 66px, 700);
+}
+
+@media screen and (max-width: 1200px) {
+    .left-hero,
+    .right-hero {
+        width: 100%;
+    }
+
+    .left-image,
+    .right-image {
+        position: relative;
+        max-width: 80%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        bottom: auto;
+    }
 }
 
 @media screen and (min-width: 1920px) {
@@ -66,3 +86,4 @@
         max-height: 820px;
     }
 }
+
