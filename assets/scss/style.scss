@@ -85,6 +85,15 @@ h5 {
 }
 
 
+.subtitle {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: .5rem;
+}
+
+
+
 .main-btn {
     @include button-base;
     border: 1px solid var(--accent--primary-1);

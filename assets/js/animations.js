@@ -60,8 +60,6 @@ gsap.to(".right-hero .right-image", {
     }
 });
 
-
-
 // nu-container 
 gsap.from(".nu-container > div", {
     y: 50,
