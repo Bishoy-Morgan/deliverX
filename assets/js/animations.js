@@ -26,19 +26,26 @@ introTl.from(".right-hero", {
     ease: "power3.out",
 }, "-=0.5");
 
-introTl.from(".right-hero .left-image img", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 0.3,
-    ease: "power2.out",
-    
-}, "-=0.3");
+gsap.to(".right-hero .left-image", {
+    y: 40,
+    ease: "sine.inOut", 
+    scrollTrigger: {
+        trigger: ".right-hero",
+        start: "top 80%",
+        end: "bottom top",
+        scrub: 1.5,
+    }
+});
 
-introTl.from(".right-hero .right-image img", {
-    scale: 0.8,
-    opacity: 0,
-    duration: 0.3,
-    ease: "power2.out",
+gsap.to(".right-hero .right-image", {
+    y: -40,
+    ease: "sine.inOut",
+    scrollTrigger: {
+        trigger: ".right-hero",
+        start: "top 80%",
+        end: "bottom top",
+        scrub: 1.5,          
+    }
 });
 
 // nu-container 
@@ -55,15 +62,21 @@ gsap.from(".nu-container > div", {
 });
 
 // features sections
-gsap.from(".features-section .feature-image", {
-    y: 80,
-    scale: .9,
-    duration: .5,
-    scrollTrigger: {
-        trigger: ".ourMission-section",
-        start: "top 80%",
-    },
+gsap.utils.toArray(".features-section .feature-image").forEach((img) => {
+    gsap.from(img, {
+        y: 80,
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.5,
+        scrollTrigger: {
+            trigger: img,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        },
+    });
 });
+
+
 
 gsap.utils.toArray([".aboutUs-container", ".ourMission-container"]).forEach((el) => {
     gsap.from(el, {
@@ -78,67 +91,46 @@ gsap.utils.toArray([".aboutUs-container", ".ourMission-container"]).forEach((el)
     });
 });
 
-
 // joureny section
-// document.addEventListener('DOMContentLoaded', function() {
-//     const cards = document.querySelectorAll('.journey-section .card');
+document.addEventListener('DOMContentLoaded', function() {
+    const journeySection = document.querySelector('.journey-section');
+    const ourJourneyContainer = document.querySelector('.ourJourney-container');
+    const cardsContainer = document.querySelector('.cards-container');
+    const cards = document.querySelectorAll('.cards-container .card');
     
-//     cards.forEach((card, index) => {
-//         gsap.fromTo(card, 
-//             {
-//                 opacity: 0,
-//                 y: 80,
-//                 scale: 0.95
-//             },
-//             {
-//                 opacity: 1,
-//                 y: 0,
-//                 scale: 1,
-//                 duration: 1,
-//                 ease: "power3.out",
-//                 scrollTrigger: {
-//                     trigger: card,
-//                     start: "top 85%", 
-//                     end: "top 60%",   
-//                     toggleActions: "play none none reverse",
-//                 }
-//             }
-//         );
-//     });
+    gsap.set(cards, {
+        opacity: 0,
+        y: 100
+    });
     
-//     const journeyContainer = document.querySelector('.ourJourney-container');
-//     const cardsContainer = document.querySelector('.cards-container');
     
-//     if (journeyContainer && cardsContainer) {
-//         ScrollTrigger.create({
-//             trigger: ".journey-section",
-//             start: "top 100px", 
-//             end: () => `+=${cardsContainer.offsetHeight - journeyContainer.offsetHeight}`,
-//             pin: journeyContainer,
-//             pinSpacing: false,
-//         });
-//     }
+    cards.forEach((card, index) => {
+        gsap.to(card, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 80%',
+                end: 'top 30%',
+                scrub: 1,
+                toggleActions: 'play none none reverse'
+            }
+        });
+    });
     
-//     gsap.fromTo('.ourJourney-container', 
-//         {
-//             opacity: 0,
-//             x: -50
-//         },
-//         {
-//             opacity: 1,
-//             x: 0,
-//             duration: 1,
-//             ease: "power3.out",
-//             scrollTrigger: {
-//                 trigger: ".journey-section",
-//                 start: "top 80%",
-//                 toggleActions: "play none none reverse",
-//             }
-//         }
-//     );
-// });
+    
+    ScrollTrigger.create({
+        trigger: journeySection,
+        start: 'top top',
+        end: () => `+=${cardsContainer.offsetHeight - window.innerHeight + 200}`,
+        pin: ourJourneyContainer,
+        pinSpacing: false
+    });
+});
 
-// partners
+// partners section
 gsap.from(".three-cols-content > img ", {
     y: 50,
     opacity: 0,
@@ -151,7 +143,7 @@ gsap.from(".three-cols-content > img ", {
     },
 });
 
-// news
+// news section
 gsap.from(".news-card", {
     y: 80,
     opacity: 0,
@@ -166,7 +158,6 @@ gsap.from(".news-card", {
         gsap.set(".news-card", { clearProps: "transform" }); 
     }
 });
-
 
 // navbar scroll animation
 let lastScroll = 0;
@@ -185,7 +176,7 @@ ScrollTrigger.create({
     }
 });
 
-// navbar dropdown 
+// navbar dropdown
 document.addEventListener('DOMContentLoaded', function() {
     const dropdownToggle = document.querySelector('.nav-item.dropdown .dropdown-toggle');
     const dropdownMenu = document.querySelector('.nav-item.dropdown .dropdown-menu');
@@ -193,56 +184,83 @@ document.addEventListener('DOMContentLoaded', function() {
     
     dropdownToggle.setAttribute('data-bs-toggle', '');
     dropdownToggle.setAttribute('aria-expanded', 'false');
+
+    dropdownMenu.style.transition = 'none';
     
-    dropdownToggle.addEventListener('mouseenter', function() {
+    // initial state
+    gsap.set(dropdownMenu, {
+        opacity: 0,
+        y: 20,
+        display: 'none',
+        visibility: 'hidden'
+    });
+    
+    function showDropdown() {
         clearTimeout(dropdownTimeout);
+        gsap.to(dropdownMenu, {
+            display: 'block',
+            visibility: 'visible',
+            opacity: 1,
+            y: 0,
+            duration: 0.4,
+            ease: 'power2.out'
+        });
         dropdownMenu.classList.add('show');
         dropdownToggle.setAttribute('aria-expanded', 'true');
-    });
+    }
+    
+    function hideDropdown() {
+        gsap.to(dropdownMenu, {
+            opacity: 0,
+            y: 20,
+            duration: 0.3,
+            ease: 'power2.in',
+            onComplete: function() {
+                dropdownMenu.classList.remove('show');
+                gsap.set(dropdownMenu, { 
+                    display: 'none',
+                    visibility: 'hidden'
+                });
+            }
+        });
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+    }
+    
+    dropdownToggle.addEventListener('mouseenter', showDropdown);
     
     dropdownToggle.addEventListener('mouseleave', function() {
         dropdownTimeout = setTimeout(function() {
             if (!dropdownMenu.matches(':hover')) {
-                dropdownMenu.classList.remove('show');
-                dropdownToggle.setAttribute('aria-expanded', 'false');
+                hideDropdown();
             }
         }, 100);
     });
     
     dropdownMenu.addEventListener('mouseenter', function() {
         clearTimeout(dropdownTimeout);
-        dropdownMenu.classList.add('show');
-        dropdownToggle.setAttribute('aria-expanded', 'true');
     });
     
     dropdownMenu.addEventListener('mouseleave', function() {
-        dropdownTimeout = setTimeout(function() {
-            dropdownMenu.classList.remove('show');
-            dropdownToggle.setAttribute('aria-expanded', 'false');
-        }, 100);
+        dropdownTimeout = setTimeout(hideDropdown, 100);
     });
     
     document.addEventListener('click', function(event) {
         if (!event.target.closest('.nav-item.dropdown')) {
-            dropdownMenu.classList.remove('show');
-            dropdownToggle.setAttribute('aria-expanded', 'false');
+            hideDropdown();
         }
     });
     
     dropdownMenu.addEventListener('click', function(event) {
         if (event.target.classList.contains('dropdown-item')) {
-            dropdownMenu.classList.remove('show');
-            dropdownToggle.setAttribute('aria-expanded', 'false');
+            hideDropdown();
         }
     });
     
     dropdownToggle.addEventListener('touchstart', function() {
         if (dropdownMenu.classList.contains('show')) {
-            dropdownMenu.classList.remove('show');
-            dropdownToggle.setAttribute('aria-expanded', 'false');
+            hideDropdown();
         } else {
-            dropdownMenu.classList.add('show');
-            dropdownToggle.setAttribute('aria-expanded', 'true');
+            showDropdown();
         }
     });
 });

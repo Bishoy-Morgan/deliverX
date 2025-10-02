@@ -1,11 +1,11 @@
-@import "base/mixins";
-@import "layout/navbar";
-@import "layout/hero";
-@import "layout/features";
-@import "layout/journey";
-@import "layout/partners";
-@import "layout/news";
-@import "layout/footer";
+@use "./base/mixins" as *;
+@use "layout/navbar";
+@use "layout/hero";
+@use "layout/features";
+@use "layout/journey";
+@use "layout/partners";
+@use "layout/news";
+@use "layout/footer";
 
 
 * {
