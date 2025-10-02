@@ -80,63 +80,63 @@ gsap.utils.toArray([".aboutUs-container", ".ourMission-container"]).forEach((el)
 
 
 // joureny section
-document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.journey-section .card');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const cards = document.querySelectorAll('.journey-section .card');
     
-    cards.forEach((card, index) => {
-        gsap.fromTo(card, 
-            {
-                opacity: 0,
-                y: 80,
-                scale: 0.95
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%", 
-                    end: "top 60%",   
-                    toggleActions: "play none none reverse",
-                }
-            }
-        );
-    });
+//     cards.forEach((card, index) => {
+//         gsap.fromTo(card, 
+//             {
+//                 opacity: 0,
+//                 y: 80,
+//                 scale: 0.95
+//             },
+//             {
+//                 opacity: 1,
+//                 y: 0,
+//                 scale: 1,
+//                 duration: 1,
+//                 ease: "power3.out",
+//                 scrollTrigger: {
+//                     trigger: card,
+//                     start: "top 85%", 
+//                     end: "top 60%",   
+//                     toggleActions: "play none none reverse",
+//                 }
+//             }
+//         );
+//     });
     
-    const journeyContainer = document.querySelector('.ourJourney-container');
-    const cardsContainer = document.querySelector('.cards-container');
+//     const journeyContainer = document.querySelector('.ourJourney-container');
+//     const cardsContainer = document.querySelector('.cards-container');
     
-    if (journeyContainer && cardsContainer) {
-        ScrollTrigger.create({
-            trigger: ".journey-section",
-            start: "top 100px", 
-            end: () => `+=${cardsContainer.offsetHeight - journeyContainer.offsetHeight}`,
-            pin: journeyContainer,
-            pinSpacing: false,
-        });
-    }
+//     if (journeyContainer && cardsContainer) {
+//         ScrollTrigger.create({
+//             trigger: ".journey-section",
+//             start: "top 100px", 
+//             end: () => `+=${cardsContainer.offsetHeight - journeyContainer.offsetHeight}`,
+//             pin: journeyContainer,
+//             pinSpacing: false,
+//         });
+//     }
     
-    gsap.fromTo('.ourJourney-container', 
-        {
-            opacity: 0,
-            x: -50
-        },
-        {
-            opacity: 1,
-            x: 0,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".journey-section",
-                start: "top 80%",
-                toggleActions: "play none none reverse",
-            }
-        }
-    );
-});
+//     gsap.fromTo('.ourJourney-container', 
+//         {
+//             opacity: 0,
+//             x: -50
+//         },
+//         {
+//             opacity: 1,
+//             x: 0,
+//             duration: 1,
+//             ease: "power3.out",
+//             scrollTrigger: {
+//                 trigger: ".journey-section",
+//                 start: "top 80%",
+//                 toggleActions: "play none none reverse",
+//             }
+//         }
+//     );
+// });
 
 // partners
 gsap.from(".three-cols-content > img ", {
